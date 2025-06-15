@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Vehicle</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">DashBoard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Add vehicle</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">In Progress </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Completed</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Settings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-5">
+    <h2>Add Vehicle</h2>
+    <form id="vehicleForm" class="mb-4">
+      <div class="mb-3">
+        <label for="make" class="form-label">Make</label>
+        <input type="text" class="form-control" id="make" required>
+      </div>
+      <div class="mb-3">
+        <label for="model" class="form-label">Model</label>
+        <input type="text" class="form-control" id="model" required>
+      </div>
+      <div class="mb-3">
+        <label for="year" class="form-label">Year</label>
+        <input type="number" class="form-control" id="year" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Vehicle</button>
+    </form>
+
+    <h3>Vehicle List</h3>
+    <table class="table table-bordered" id="vehicleTable">
+      <thead>
+        <tr>
+          <th>Make</th>
+          <th>Model</th>
+          <th>Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Vehicles will be added here -->
+      </tbody>
+    </table>
+  </div>
+  <script>
+    const vehicleForm = document.getElementById('vehicleForm');
+    const vehicleTableBody = document.querySelector('#vehicleTable tbody');
+    const vehicles = [];
+
+    vehicleForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const make = document.getElementById('make').value;
+      const model = document.getElementById('model').value;
+      const year = document.getElementById('year').value;
+
+      // Add vehicle to array
+      vehicles.push({ make, model, year });
+
+      // Update table
+      renderTable();
+
+      // Reset form
+      vehicleForm.reset();
+    });
+
+    function renderTable() {
+      vehicleTableBody.innerHTML = '';
+      vehicles.forEach(vehicle => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${vehicle.make}</td>
+          <td>${vehicle.model}</td>
+          <td>${vehicle.year}</td>
+        `;
+        vehicleTableBody.appendChild(row);
+      });
+    }
+  </script>
+</body>
+</html>
