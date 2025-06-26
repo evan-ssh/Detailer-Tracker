@@ -1,38 +1,87 @@
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
 
-.navbar-brand {
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
+    body {
+      background-color: #f2f2f2;
+    }
 
+    nav {
+      background-color: #1f5aa5;
+      padding: 15px;
+      text-align: center;
+    }
 
-.nav-link.active {
-  color: #ffc107 !important;
-  font-weight: 600;
-}
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-.nav-link:hover {
-  color: #5676b8 !important;
-  transition: color 0.2s;
-}
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
+    h2, h3 {
+      color: #1f5aa5;
+      margin-bottom: 20px;
+    }
 
-body {
-  background-color: #0846ff;
-  text-align: center !important;
-  color: aliceblue;
-  border: white 1px solid;
+    form div {
+      margin-bottom: 15px;
+    }
 
-}
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
 
+    input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
 
-.navbar {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-}
+    button {
+      background-color: #1f5aa5;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
 
-.nav-link {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-}
-  
+    button:hover {
+      background-color: #174a84;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e6f0ff;
+    }
