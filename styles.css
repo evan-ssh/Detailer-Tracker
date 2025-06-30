@@ -1,33 +1,45 @@
- * {
+* {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
     }
+    /* Add */
 
     body {
-      background-color: #f2f2f2;
+      min-height: 100vh;
+      margin: 0;
+      background: url('imgs/gradientblue.jpg');
+      font-family: Arial, sans-serif;
     }
 
     nav {
-      background-color: #1f5aa5;
-      padding: 15px;
-      text-align: center;
+      width: 100%;
+      background: #000dff;
+      padding: 1rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
     }
 
     nav a {
-      color: white;
-      margin: 0 15px;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.2s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #007bff;
     }
 
     .container {
-      max-width: 800px;
+      max-width: 1200px;
       margin: 40px auto;
       background-color: #fff;
       padding: 30px;
@@ -38,6 +50,7 @@
     h2, h3 {
       color: #1f5aa5;
       margin-bottom: 20px;
+      text-align: center;
     }
 
     form div {
@@ -58,6 +71,7 @@
     }
 
     button {
+      margin-top: 10px;
       background-color: #1f5aa5;
       color: white;
       padding: 10px 20px;
@@ -84,4 +98,102 @@
 
     th {
       background-color: #e6f0ff;
+    }
+
+    /* Dashboard styling */
+    .dashboard {
+      
+      max-width: 1200px;
+      margin: 100px auto;
+      background-color: #000dff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+   
+    .dashboard h2{
+      color: #ffff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+  
+    .dashboard table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      
+    }
+
+    .dashboard th, .dashboard td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+
+    .dashboard th {
+      background-color: #e6f0ff;
+    }
+
+    /* Login Card */
+
+    .login-bg {
+      background: url('imgs/gradientblue.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+    }
+    .login-card {
+      background: #000dff;
+      color: white;
+      height: auto;
+      padding: 120px;
+      border-radius: 8px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      max-width: 450px;
+      margin: 150px auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .login-card h2 {
+      margin-bottom: 1.8rem;
+      color: white;
+      text-align: center;
+    }
+
+    .login-card form > div {
+      margin-bottom: 1rem;
+    }
+
+    .login-card label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .login-card input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .login-card button {
+      width: 100%;
+      padding: 0.75rem;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .login-card button:hover {
+      background: #0056b3;
     }
